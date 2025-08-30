@@ -1,4 +1,3 @@
-//your JS code here. If required.
 // Select the form
 const form = document.getElementById("voteForm");
 
@@ -10,7 +9,7 @@ form.addEventListener("submit", function(e) {
 
   // Validation for empty inputs
   if (!name || !age) {
-    alert("Please enter valid details.");
+    alert("Please enter valid details"); // Removed period to match Cypress
     return;
   }
 
@@ -21,9 +20,9 @@ form.addEventListener("submit", function(e) {
   const votePromise = new Promise((resolve, reject) => {
     setTimeout(() => {
       if (ageNum >= 18) {
-        resolve(`Welcome, ${name}. You can vote.`);
+        resolve(`Welcome, ${name}. You can vote`); // Removed period
       } else {
-        reject(`Oh sorry ${name}. You aren't old enough.`);
+        reject(`Oh sorry ${name}. You aren't old enough`); // Removed period
       }
     }, 4000); // 4-second delay
   });
